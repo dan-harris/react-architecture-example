@@ -1,0 +1,13 @@
+button {
+  margin-left: 5px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  padding: 5px;
+}
+input {
+  margin: 0px 5px;
+}
