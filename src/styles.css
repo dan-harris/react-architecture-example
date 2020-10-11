@@ -1,13 +1,120 @@
-button {
-  margin-left: 5px;
+/* base */
+body,
+html {
+  background-color: #011627;
+  font-family: "Fira Code";
+  color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
-li {
-  padding: 5px;
+
+code {
+  font-family: "Fira Mono";
 }
+
+a {
+  color: white;
+}
+
+/* navigo link */
+a[data-navigo] {
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: #ffffff1c;
+}
+
+a[data-navigo]:hover {
+  text-decoration: none;
+  color: white;
+}
+
+button,
 input {
-  margin: 0px 5px;
+  background-color: transparent;
+  border: 1.5px solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: white;
+  font-family: "Fira Code";
+}
+
+button:hover {
+  border: 1.5px solid white;
+}
+
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* stack */
+[class^="dio-stack"] > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dio-stack > * + *,
+.dio-stack--small > * + * {
+  margin-top: 1.5rem;
+}
+
+.dio-stack--large > * + * {
+  margin-top: 3rem;
+}
+
+/* columns */
+[class^="dio-columns"] {
+  display: flex;
+  flex-direction: row;
+}
+
+.dio-columns--gap-1 > * + * {
+  margin-left: 1rem;
+}
+
+.dio-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* inline */
+.dio-inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.dio-inline--gap-1 > * + * {
+  margin-left: 1rem;
+}
+
+/* alignment/placement */
+.dio-align--center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dio-width--fill {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.dio-height--fill {
+  height: 100%;
+  flex-grow: 1;
 }

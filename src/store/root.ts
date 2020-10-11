@@ -39,9 +39,9 @@ type Actions =
 
 function peopleReducer(state: Person[] = [], action: Actions) {
   switch (action.type) {
-    case "AddPerson":
+    case "ADD_PERSON":
       return state.concat({ id: state.length + 1, name: action.payload });
-    case "RemovePerson":
+    case "REMOVE_PERSON":
       return state.filter((person) => person.id !== action.payload);
     default:
       neverReached(action);
@@ -55,7 +55,7 @@ const rootReducer = combineReducers<AppState>({
   people: peopleReducer
 });
 
-function configureStore(): Store<AppState> {
+export const createReduxStore: () => Store<AppState> = () => {
   const store = createStore(rootReducer, undefined);
   return store;
-}
+};
